@@ -15,8 +15,23 @@ arrayA.push(3);
 arrayA.push(10);
 arrayA.push(11);
 var arrayB = arrayA.filter(function (gt, chiso, mang) {
-    return gt > 3;
+    return gt % 2 == 1; //Cac so le
 });
+var arrayC;
+function contain(arrayA, arrayB) {
+    var arrayC = new Array();
+    for (var i = 0; i < arrayA.length; i++) {
+        for (var j = 0; j < arrayB.length; j++) {
+            if (arrayA[i] != arrayB[j]) {
+                arrayC.push(arrayA[i]);
+                break;
+            }
+        }
+    }
+    return arrayC;
+}
 console.log(arrayA);
 console.log(arrayB);
+arrayC = contain(arrayA, arrayB);
+console.log(arrayC);
 console.log(sayHi(ten));
