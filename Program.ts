@@ -17,7 +17,7 @@ arrayA.push(10);
 arrayA.push(11);
 
 var arrayB=arrayA.filter((gt:number,chiso:number,mang:number[])=>{
-    return gt>3;
+    return gt%2==1; //Cac so le
 })
 
 console.log(arrayA); 
